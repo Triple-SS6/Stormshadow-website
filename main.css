@@ -105,7 +105,8 @@ footer {
     position: fixed;
     bottom: 10px;
     right: 50%;
-    background-color: rgb(143, 62, 62);
+    font-size: 18px;
+    /* background-color: rgb(143, 62, 62); */
 }
 
 .container {
