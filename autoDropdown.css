@@ -1,0 +1,116 @@
+ul.contentHeader {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+li {
+    float: left;
+}
+  
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+} 
+li.dropdown {
+    display: inline-block;
+}
+  
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+  
+.dropdownContent a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdownContent a:hover {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 70px;
+    padding: 0 15px;
+    margin: 0 5px;
+}
+  
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+.dropdown-btnProjects {
+    display: block;
+}
+
+.dropdownContentProjects {
+    display: none;
+}
+.active {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.dropdownContentProjects a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+} 
+.dropdownContentProjects a:hover {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 70px;
+    padding: 0 15px;
+    margin: 0 5px;
+}
+button {
+    margin: 0;
+    padding: 0 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: yellow;
+    background-color: rgb(61, 121, 170);
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    padding: 5px 16px;
+    color: rgb(5, 5, 5);
+    background-color: rgb(225, 65, 217);
+    font-size: 28px;
+    color:whitesmoke;
+}
+#arrow {
+    color: black;
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        display: block;
+    }    
+    .contentHeader {
+        display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .container {
+        display: none;
+    }    
+    .contentHeader {
+        display: block;
+    }
+}

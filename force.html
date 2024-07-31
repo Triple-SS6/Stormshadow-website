@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Calculate Force</h1>
+        <p>
+            <label>Pound Force (Ibf): &nbsp;&nbsp;</label>
+            <input type="number" id="inputPoundForce" placeholder="PoundForce" oninput="ForceConverterPoundForce(this.value)" onchange="ForceConverterPoundForce(this.value)">
+            <span id="outputPoundForce"></span>
+        </p>
+        <p>
+            <label>Kilogram Force (Kgf): &nbsp;&nbsp;</label>
+            <input type="number" id="inputKilogramForce" placeholder="KilogramForce" oninput="ForceConverterKilogramForce(this.value)" onchange="ForceConverterKilogramForce(this.value)">
+            <span id="outputKilogramForce"></span>
+        </p>
+        <p>
+            <label>Newton (N): &nbsp;&nbsp;</label>
+            <input type="number" id="inputNewton" placeholder="Newton" oninput="ForceConverterNewton(this.value)" onchange="ForceConverterNewton(this.value)">
+            <span id="outputNewton"></span>
+        </p>
+    
+</body>
+<script>
+function ForceConverterPoundForce(valNum) {
+    var kilogramForce = valNum*0.454;
+    document.querySelector('#outputKilogramForce').innerHTML = kilogramForce;
+    var newton = valNum*4.448;
+    document.querySelector('#outputNewton').innerHTML = newton;
+}
+function ForceConverterKilogramForce(valNum) {
+    var poundForce = valNum*2.205;
+    document.querySelector('#outputPoundForce').innerHTML = poundForce;
+    var newton = valNum*9.807;
+    document.querySelector('#outputNewton').innerHTML = newton;
+}
+function ForceConverterNewton(valNum) {
+    var poundForce = valNum*0.225;
+    document.querySelector('#outputPoundForce').innerHTML = poundForce;
+    var kilogramForce = valNum*0.102;
+    document.querySelector('#outputKilogramForce').innerHTML = kilogramForce;
+}
+
+</script>
+</html>

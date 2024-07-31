@@ -3,36 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="default.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <title>Area</title>
 </head>
 <body>
-    <h1>Calculate Area</h1>
-    <p>
-        <label>Square Metre (m<sup>2</sup>): &nbsp;&nbsp;</label>
-        <input type="number" id="inputSquareMetre" placeholder="SquareMetre" oninput="lengthConverterSquareMetre(this.value)" onchange="lengthConverterSquareMetre(this.value)">
-        <span id="outputSquareMetre"></span>
-    </p>
-    <p>
-        <label>Square Centimetre (cm<sup>2</sup>): &nbsp;&nbsp;</label>
-        <input type="number" id="inputSquareCentimetre" placeholder="SquareCentimetre" oninput="lengthConverterSquareCentimetre(this.value)" onchange="lengthConverterSquareCentimetre(this.value)">
-        <span id="outputSquareCentimetre"></span>
-    </p>
-    <p>
-        <label>Square Millimetre (mm<sup>2</sup>): &nbsp;&nbsp;</label>
-        <input type="number" id="inputSquareMillimetre" placeholder="SquareMillimetre" oninput="lengthConverterSquareMillimetre(this.value)" onchange="lengthConverterSquareMillimetre(this.value)">
-        <span id="outputSquareMillimetre"> </span>
-    </p>
-    <p>
-        <label>Square Feet (Ft<sup>2</sup>): &nbsp;&nbsp;</label>
-        <input type="number" id="inputSquareFeet" placeholder="SquareFeet" oninput="lengthConverterSquareFeet(this.value)" onchange="lengthConverterSquareFeet(this.value)">
-        <span id="outputSquareFeet"></span>
-    </p>
-    <p>
-        <label>Square Inch (In<sup>2</sup>): &nbsp;&nbsp;</label>
-        <input type="number" id="inputSquareInch" placeholder="SquareInch" oninput="lengthConverterSquareInch(this.value)" onchange="lengthConverterSquareInch(this.value)">
-        <span id="outputSquareInch"></span>
-    </p>
-    
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="navbar">    
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="lengthConverter.html">Length</a>
+                        <a href="area.html">Area</a>
+                        <a href="weight.html">Weight</a>
+                        <a href="#">Converter</a>
+                        <a href="#">Converter</a>
+                    </div>
+                </li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>    
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <main>
+        <div class="sidebar">
+        </div>
+        
+        <div class="content">
+            <h1>Calculate Area</h1>
+            <p>
+                <label>Square Metre (m<sup>2</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputSquareMetre" placeholder="SquareMetre" oninput="lengthConverterSquareMetre(this.value)" onchange="lengthConverterSquareMetre(this.value)">
+                <span id="outputSquareMetre"></span>
+            </p>
+            <p>
+                <label>Square Centimetre (cm<sup>2</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputSquareCentimetre" placeholder="SquareCentimetre" oninput="lengthConverterSquareCentimetre(this.value)" onchange="lengthConverterSquareCentimetre(this.value)">
+                <span id="outputSquareCentimetre"></span>
+            </p>
+            <p>
+                <label>Square Millimetre (mm<sup>2</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputSquareMillimetre" placeholder="SquareMillimetre" oninput="lengthConverterSquareMillimetre(this.value)" onchange="lengthConverterSquareMillimetre(this.value)">
+                <span id="outputSquareMillimetre"> </span>
+            </p>
+            <p>
+                <label>Square Feet (Ft<sup>2</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputSquareFeet" placeholder="SquareFeet" oninput="lengthConverterSquareFeet(this.value)" onchange="lengthConverterSquareFeet(this.value)">
+                <span id="outputSquareFeet"></span>
+            </p>
+            <p>
+                <label>Square Inch (In<sup>2</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputSquareInch" placeholder="SquareInch" oninput="lengthConverterSquareInch(this.value)" onchange="lengthConverterSquareInch(this.value)">
+                <span id="outputSquareInch"></span>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span class="year"></span> <a href="contact.html">Stormshadow6</a>
+    </footer>
 </body>
+<script src="scripts.js"></script>
 <script src="area.js"></script>
-</html> 
+</html>

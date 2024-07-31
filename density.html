@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Density</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Calculate Density</h1>
+        <p>
+            <label>1 m<sup>3</sup> of Water (Ibf): &nbsp;&nbsp;</label>
+            <input type="number" id="inputCubicMetreofWater" placeholder="Cubic Metre of Water" oninput="DensityConverterCubicMetreofWater(this.value)" onchange="DensityConverterCubicMetreofWater(this.value)">
+            <p><span id="outputCubicMetreofWaterMass"></span> <span>(Kg Mass)</span></p>
+            <span id="outputCubicMetreofWaterIb"></span> <span>(Ib)</span>
+        </p>
+        <p>
+            <label>1 L of Water : &nbsp;&nbsp;</label>
+            <input type="number" id="inputLitreofWater" placeholder="Litre of Water" oninput="DensityConverterLitreofWater(this.value)" onchange="DensityConverterLitreofWater(this.value)">
+            <p><span id="outputLitreofWaterMass"></span>  <span>(Kg Mass)</span></p>
+            <span id="outputLitreofWaterIb"></span>  <span>(Ib)</span>
+        </p>
+
+    
+</body>
+<script>
+function DensityConverterCubicMetreofWater(valNum) {
+    var CubicMetreofWatermass = valNum*1000;
+    document.querySelector('#outputCubicMetreofWaterMass').innerHTML = CubicMetreofWatermass;
+    var CubicMetreofWaterIb = valNum*2205;
+    document.querySelector('#outputCubicMetreofWaterIb').innerHTML = CubicMetreofWaterIb;
+}
+
+function DensityConverterLitreofWater(valNum) {
+    var litreofWatermass = valNum*1;
+    document.querySelector('#outputLitreofWaterMass').innerHTML = litreofWatermass;
+    var litreofWaterIb = valNum*0.220;
+    document.querySelector('#outputLitreofWaterIb').innerHTML = litreofWaterIb;
+}
+
+</script>
+</html>

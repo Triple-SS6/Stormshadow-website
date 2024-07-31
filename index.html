@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>stormshadow6</title>
+    <link rel="stylesheet" href="autoDropdown.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Homepage</title>
 </head>
 <body>
     <header>
@@ -13,35 +16,90 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        
+
         <div class="navbar">    
-            <a href="home">Home</a>
-            <a href="home">Projects</a>
-            <a href="lengthConverter.html">Length Converter</a>
-            <a href="home">Audio</a>
-            <a href="home">Contact</a>
+            <ul class="contentHeader">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">My Projects</a>
+                    <div class="dropdownContent">
+                        <a href="M calc/index.html">Calculator App</a>
+                        <a href="SolarDesign/solar.html">Solar sizing</a>
+                    </div>
+                </li>
+                <li><a href="calculations.html">Calculations</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="length.html">Length</a>
+                        <a href="area.html">Area</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="force.html">Force</a>
+                        <a href="pressure.html">Pressure & Stress</a>
+                        <a href="velocity.html">Velocity</a>
+                        <a href="volumetricFlow.html">Volumetric Flow</a>
+                        <a href="density.html">Density</a>
+                        <a href="torque.html">Torque</a>
+                    </div>
+                </li>
+                <li><a href="audio & video/audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
         
-            <label class="switch">
-                <input type="checkbox" onclick="dark();">
-                <span class="slider"></span>
-            </label>
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
     </header>
+
+    <h1 class="name">AM STATIONERY</h1>
 
     <main>
         <div class="sidebar">
-            <a href="home">Home</a>
-            <a href="home">Projects</a>
-            <a href="lengthConverter.html">Length Converter</a>
-            <a href="home">Audio</a>
-            <a href="home">Contact</a>
+            <a href="index.html">Home</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtnProjects"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    My Projects  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+
+                <div class="dropdownContentProjects">
+                    <a href="M calc/index.html">Calculator App</a>
+                    <a href="SolarDesign/solar.html">Solar sizing</a>
+                </div>
+            </div>
+            <a href="calculations.html">Calculations</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtn"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    Converter  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdownContentProjects">
+                    <a href="length.html">Length</a>
+                    <a href="area.html">Area</a>
+                    <a href="volume.html">Volume</a>
+                    <a href="mass.html">Mass</a>
+                    <a href="force.html">Force</a>
+                    <a href="pressure.html">Pressure & Stress</a>
+                    <a href="velocity.html">Velocity</a>
+                    <a href="volumetricFlow.html">Volumetric Flow</a>
+                    <a href="density.html">Density</a>
+                    <a href="torque.html">Torque</a>
+                </div>
+            </div>
+            <a href="audio & video/audio.html">Audio</a>
+            <a href="contact.html">Contact</a>
         </div>
-        
+
+        <div class="content">
+        </div>
     </main>
 
     <footer>
-        <span class="year"></span> &copy;
-        &lt;&lt;&lt; <a href="contact">Stormshadow6</a> &gtrdot;&gtrdot;&gtrdot;
+        <!-- &lt;&lt;&lt; &copy; <span class="year"></span> <a href="contact">Stormshadow6</a> &gtrdot;&gtrdot;&gtrdot; -->
+        &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
     </footer>
 </body>
 <script src="scripts.js"></script>

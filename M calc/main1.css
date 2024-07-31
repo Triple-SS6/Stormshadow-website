@@ -1,0 +1,100 @@
+body {
+    width: 500px;
+    min-height: calc(100vh - 2px);
+    /* background-color: blue; */
+}
+
+header {
+    text-align: center;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+}
+
+footer {
+    text-align: center;
+}
+
+footer:hover {
+    cursor: pointer;
+    color: royalblue;
+}
+
+.calculator {
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 80vh;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgb(31, 5, 5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+.display {
+    margin-top: 10px;
+    height: 80px;
+    width: 240px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 24px;
+    color: black;
+    background-color: aquamarine;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: right;
+    overflow: auto;
+}
+
+.buttons-five {
+    height: 20px;
+    width: 50px;
+    font-size: 4px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(5,3fr);
+    gap: 5px;    
+}
+
+.buttons-four {
+    margin-top: 140px;
+    margin-left: 20px;
+    font-size: 25px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    gap: 5px;
+}
+
+button {
+    height: 35px;
+    width: 50px;
+}
+
+.buttons {
+    height: 60vh;
+    padding-left: 5px;
+    padding-right: 25px;
+    width: 270px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e1e1e1;
+}

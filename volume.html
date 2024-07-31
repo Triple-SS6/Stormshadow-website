@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="default.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Convert Volume</title>
+</head>
+<body>
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="navbar">    
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="VolumeConverter.html">Length</a>
+                        <a href="area.html">Area</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="#">Converter</a>
+                        <a href="#">Converter</a>
+                    </div>
+                </li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>    
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <main>
+        <div class="sidebar">
+        </div>
+        <div class="content">
+            <h1>Calculate Volume</h1>
+            <p>
+                <label>Cubic Metre (m<sup>3</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputCubicMetre" placeholder="CubicMetre" oninput="VolumeConverterCubicMetre(this.value)" onchange="VolumeConverterCubicMetre(this.value)">
+                <span id="outputCubicMetre"></span>
+            </p>
+            <p>
+                <label>Cubic Centimetre (cm<sup>3</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputCubicCentimetre" placeholder="CubicCentimetre" oninput="VolumeConverterCubicCentimetre(this.value)" onchange="VolumeConverterCubicCentimetre(this.value)">
+                <span id="outputCubicCentimetre"></span>
+            </p>
+            <p>
+                <label>Cubic Millimetre (mm<sup>3</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputCubicMillimetre" placeholder="CubicMillimetre" oninput="VolumeConverterCubicMillimetre(this.value)" onchange="VolumeConverterCubicMillimetre(this.value)">
+                <span id="outputCubicMillimetre"></span>
+            </p>
+            <p>
+                <label>Cubic Foot (Ft<sup>3</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputCubicFoot" placeholder="CubicFoot" oninput="VolumeConverterCubicFoot(this.value)" onchange="VolumeConverterCubicFoot(this.value)">
+                <span id="outputCubicFoot"></span>
+            </p>
+            <p>
+                <label>Cubic Inch (In<sup>3</sup>): &nbsp;&nbsp;</label>
+                <input type="number" id="inputCubicInch" placeholder="CubicInch" oninput="VolumeConverterCubicInch(this.value)" onchange="VolumeConverterCubicInch(this.value)">
+                <span id="outputCubicInch"></span>
+            </p>
+            <p>
+                <label>Imperial Gallon (IG): &nbsp;&nbsp;</label>
+                <input type="number" id="inputImperialGallon" placeholder="ImperialGallon" oninput="VolumeConverterImperialGallon(this.value)" onchange="VolumeConverterImperialGallon(this.value)">
+                <span id="outputImperialGallon"></span>
+            </p>
+            <p>
+                <label>US Gallon (U.S.G): &nbsp;&nbsp;</label>
+                <input type="number" id="inputUSGallon" placeholder="USGallon" oninput="VolumeConverterUSGallon(this.value)" onchange="VolumeConverterUSGallon(this.value)">
+                <span id="outputUSGallon"></span>
+            </p>
+            <p>
+                <label>Megalitre (ML): &nbsp;&nbsp;</label>
+                <input type="number" id="inputMegalitre" placeholder="Megalitre" oninput="VolumeConverterMegalitre(this.value)" onchange="VolumeConverterMegalitre(this.value)">
+                <span id="outputMegalitre"></span>
+            </p>
+            <p>
+                <label>Kilolitre (KL): &nbsp;&nbsp;</label>
+                <input type="number" id="inputKilolitre" placeholder="Kilolitre" oninput="VolumeConverterKilolitre(this.value)" onchange="VolumeConverterKilolitre(this.value)">
+                <span id="outputKilolitre"></span>
+            </p>
+            <p>
+                <label>Litre (L): &nbsp;&nbsp;</label>
+                <input type="number" id="inputLitre" placeholder="Litre" oninput="VolumeConverterLitre(this.value)" onchange="VolumeConverterLitre(this.value)">
+                <span id="outputLitre"></span>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span class="year"></span> <a href="contact.html">Stormshadow6</a>
+    </footer>
+</body>
+<script src="scripts.js"></script>
+
+<script>
+function VolumeConverterCubicMetre(valNum) {
+    var cm = valNum*1000000;
+    document.querySelector('#outputCubicCentimetre').innerHTML = cm;
+    var millimeters = valNum*1000000000;
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimeters;
+    var foot = valNum*35.315;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum*61023.744;
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum*219.969;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum*264.172;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/1000;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum*1;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum*1000;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterCubicCentimetre(valNum) {
+    var m = valNum/1000000;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var millimeters = valNum*1000;
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimeters;
+    var foot = valNum/28320;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum/16.387;
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum/4546;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum/3785;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/1000000000;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/1000000;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum/1000;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterCubicMillimetre(valNum) {
+    var m = valNum/1000000000;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum/1000;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var foot = valNum/(2.8320*1000000);
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum/16387;
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum/(4.546*1000000);
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum/(3.785*1000000);
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/1000000000000;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/1000000000;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum/1000000;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterCubicFoot(valNum) {
+    var m = valNum/35.315;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*28320;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*(2.8320*10000000);
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var inchz = valNum*1728;
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum*6.229;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum*7.481;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/35310;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/35.315;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum*28.317;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterCubicInch(valNum) {
+    var m = valNum/61020;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*16.387;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*16390;
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var foot = valNum/1728;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var imperialGallon = valNum/277.4;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum/231;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/(6.102*10000000);
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/61020;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum/61.024;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterImperialGallon(valNum) {
+    var m = valNum/220;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*4546.09;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*(4.54609*1000000);
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var foot = valNum/6.229;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum*277.419;
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var USGallon = valNum*1.20095;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/220000;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/220;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum*4.54609;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+    
+function VolumeConverterUSGallon(valNum) {
+    var m = valNum/264.2;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*3785.412;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*(3.78541178*1000000);
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var foot = valNum/7.48;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum*231;
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum/1.20095;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var megalitre = valNum/264200;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/264.2;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum*3.78541;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+    
+function VolumeConverterMegalitre(valNum) {
+    var m = valNum*1000;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*1000000000;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*(1000000000000);
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var foot = valNum*35314.667;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum*(6.10237441*10000000);
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum*219969.248;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum*264172.052;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var kilolitre = valNum*1000;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+    var litre = valNum*1000000;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterKilolitre(valNum) {
+    var m = valNum*1;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*1000000;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*(1000000000);
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var foot = valNum*35.314667;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum*(6.10237441*10000);
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum*219.969248;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum*264.172052;
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/1000;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var litre = valNum*1000;
+    document.querySelector('#outputLitre').innerHTML = litre;
+}
+
+function VolumeConverterLitre(valNum) {
+    var m = valNum/1000;
+    document.querySelector('#outputCubicMetre').innerHTML = m;
+    var centimeters = valNum*1000;
+    document.querySelector('#outputCubicCentimetre').innerHTML = centimeters;
+    var millimetre = valNum*(1000000);
+    document.querySelector('#outputCubicMillimetre').innerHTML = millimetre;
+    var foot = valNum/28.3168199;
+    document.querySelector('#outputCubicFoot').innerHTML = foot;
+    var inchz = valNum*(6.10237441*10);
+    document.querySelector('#outputCubicInch').innerHTML = inchz;
+    var imperialGallon = valNum/4.54609;
+    document.querySelector('#outputImperialGallon').innerHTML = imperialGallon;
+    var USGallon = valNum/(3.78541178);
+    document.querySelector('#outputUSGallon').innerHTML = USGallon;
+    var megalitre = valNum/1000000;
+    document.querySelector('#outputMegalitre').innerHTML = megalitre;
+    var kilolitre = valNum/1000;
+    document.querySelector('#outputKilolitre').innerHTML = kilolitre;
+}
+    
+</script>
+</html>

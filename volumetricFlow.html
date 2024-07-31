@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volumetric Flow</title>
+</head>
+<body>
+    
+    <div class="content">
+        <h1>Calculate Volumetric Flow</h1>
+        <p>
+            <label>Cubic Metres per Hour (m<sup>3</sup>/h): &nbsp;&nbsp;</label>
+            <input type="number" id="inputCubicMetresperHour" placeholder="CubicMetresperHour" oninput="VFlowConverterCubicMetresperHour(this.value)" onchange="VFlowConverterCubicMetresperHour(this.value)">
+            <span id="outputCubicMetresperHour"></span>
+        </p>
+        <p>
+            <label>Cubic Feet per Second (ft<sup>3</sup>/s): &nbsp;&nbsp;</label>
+            <input type="number" id="inputCubicFeetperSecond" placeholder="CubicFeetperSecond" oninput="VFlowConverterCubicFeetperSecond(this.value)" onchange="VFlowConverterCubicFeetperSecond(this.value)">
+            <span id="outputCubicFeetperSecond"></span>
+        </p>
+        <p>
+            <label>Imperial Gallon per Minute (IGPM): &nbsp;&nbsp;</label>
+            <input type="number" id="inputImperialGallonperMinute" placeholder="ImperialGallonperMinute" oninput="VFlowConverterImperialGallonperMinute(this.value)" onchange="VFlowConverterImperialGallonperMinute(this.value)">
+            <span id="outputImperialGallonperMinute"></span>
+        </p>
+        <p>
+            <label>US Gallon per Minute (USGPM): &nbsp;&nbsp;</label>
+            <input type="number" id="inputUSGallonperMinute" placeholder="USGallonperMinute" oninput="VFlowConverterUSGallonperMinute(this.value)" onchange="VFlowConverterUSGallonperMinute(this.value)">
+            <span id="outputUSGallonperMinute"></span>
+        </p>
+        <p>
+            <label>Megalitres per day (MLD): &nbsp;&nbsp;</label>
+            <input type="number" id="inputMegalitresperday" placeholder="Megalitresperday" oninput="VFlowConverterMegalitresperday(this.value)" onchange="VFlowConverterMegalitresperday(this.value)">
+            <span id="outputMegalitresperday"></span>
+        </p>
+        <p>
+            <label>Kilolitres per Hours (KI/h): &nbsp;&nbsp;</label>
+            <input type="number" id="inputKilolitresperHours" placeholder="KilolitresperHours" oninput="VFlowConverterKilolitresperHours(this.value)" onchange="VFlowConverterKilolitresperHours(this.value)">
+            <span id="outputKilolitresperHours"></span>
+        </p>
+        <p>
+            <label>LitresperSecond (l/s): &nbsp;&nbsp;</label>
+            <input type="number" id="inputLitresperSecond" placeholder="LitresperSecond" oninput="VFlowConverterLitresperSecond(this.value)" onchange="VFlowConverterLitresperSecond(this.value)">
+            <span id="outputLitresperSecond"></span>
+        </p>
+    </div>
+</body>
+<script>
+function VFlowConverterCubicMetresperHour(valNum) {
+    var fts = valNum*0.0098096;
+    document.querySelector('#outputCubicFeetperSecond').innerHTML = fts;
+    var igpm = valNum*3.6661526;
+    document.querySelector('#outputImperialGallonperMinute').innerHTML = igpm;
+    var usgpm = valNum*4.4028675;
+    document.querySelector('#outputUSGallonperMinute').innerHTML = usgpm;
+    var mld = valNum*0.024;
+    document.querySelector('#outputMegalitresperday').innerHTML = mld;
+    var kih = valNum*1;
+    document.querySelector('#outputKilolitresperHours').innerHTML = kih;
+    var ls = valNum*0.2777778;
+    document.querySelector('#outputLitresperSecond').innerHTML = ls;
+}
+
+function VFlowConverterCubicFeetperSecond(valNum) {
+    var mh = valNum*101.940648;
+    document.querySelector('#outputCubicMetresperHour').innerHTML = mh;
+    var igpm = valNum*373.729973;
+    document.querySelector('#outputImperialGallonperMinute').innerHTML = igpm;
+    var usgpm = valNum*448.831169;
+    document.querySelector('#outputUSGallonperMinute').innerHTML = usgpm;
+    var mld = valNum*2.44657555;
+    document.querySelector('#outputMegalitresperday').innerHTML = mld;
+    var kih = valNum*101.940648;
+    document.querySelector('#outputKilolitresperHours').innerHTML = kih;
+    var ls = valNum*28.3168466;
+    document.querySelector('#outputLitresperSecond').innerHTML = ls;
+}
+
+function VFlowConverterImperialGallonperMinute(valNum) {
+    var mh = valNum*0.2727655;
+    document.querySelector('#outputCubicMetresperHour').innerHTML = mh;
+    var fts = valNum*0.0026757;
+    document.querySelector('#outputCubicFeetperSecond').innerHTML = fts;
+    var usgpm = valNum*1.20095;
+    document.querySelector('#outputUSGallonperMinute').innerHTML = usgpm;
+    var mld = valNum*0.0065463;
+    document.querySelector('#outputMegalitresperday').innerHTML = mld;
+    var kih = valNum*0.2727655;
+    document.querySelector('#outputKilolitresperHours').innerHTML = kih;
+    var ls = valNum*0.075768;
+    document.querySelector('#outputLitresperSecond').innerHTML = ls;
+}
+
+function VFlowConverterUSGallonperMinute(valNum) {
+    var mh = valNum*0.2271247;
+    document.querySelector('#outputCubicMetresperHour').innerHTML = mh;
+    var fts = valNum*0.002228;
+    document.querySelector('#outputCubicFeetperSecond').innerHTML = fts;
+    var igpm = valNum*0.83267;
+    document.querySelector('#outputImperialGallonperMinute').innerHTML = igpm;
+    var mld = valNum*0.00545099;
+    document.querySelector('#outputMegalitresperday').innerHTML = mld;
+    var kih = valNum*0.2271247;
+    document.querySelector('#outputKilolitresperHours').innerHTML = kih;
+    var ls = valNum*0.06309;
+    document.querySelector('#outputLitresperSecond').innerHTML = ls;
+}
+
+function VFlowConverterMegalitresperday(valNum) {
+    var mh = valNum*41.666667;
+    document.querySelector('#outputCubicMetresperHour').innerHTML = mh;
+    var fts = valNum*0.408734;
+    document.querySelector('#outputCubicFeetperSecond').innerHTML = fts;
+    var igpm = valNum*152.756359;
+    document.querySelector('#outputImperialGallonperMinute').innerHTML = igpm;
+    var usgpm = valNum*183.452814;
+    document.querySelector('#outputUSGallonperMinute').innerHTML = usgpm;
+    var kih = valNum*41.666667;
+    document.querySelector('#outputKilolitresperHours').innerHTML = kih;
+    var ls = valNum*11.57407;
+    document.querySelector('#outputLitresperSecond').innerHTML = ls;
+}
+
+function VFlowConverterKilolitresperHours(valNum) {
+    var mh = valNum*1;
+    document.querySelector('#outputCubicMetresperHour').innerHTML = mh;
+    var fts = valNum*0.0098096;
+    document.querySelector('#outputCubicFeetperSecond').innerHTML = fts;
+    var igpm = valNum*3.66615;
+    document.querySelector('#outputImperialGallonperMinute').innerHTML = igpm;
+    var usgpm = valNum*4.4028675;
+    document.querySelector('#outputUSGallonperMinute').innerHTML = usgpm;
+    var mld = valNum*0.024;
+    document.querySelector('#outputMegalitresperday').innerHTML = mld;
+    var ls = valNum/3.6;
+    document.querySelector('#outputLitresperSecond').innerHTML = ls;
+}
+
+function VFlowConverterLitresperSecond(valNum) {
+    var mh = valNum*3.6;
+    document.querySelector('#outputCubicMetresperHour').innerHTML = mh;
+    var fts = valNum*0.03531;
+    document.querySelector('#outputCubicFeetperSecond').innerHTML = fts;
+    var igpm = valNum*13.198149;
+    document.querySelector('#outputImperialGallonperMinute').innerHTML = igpm;
+    var usgpm = valNum*15.85037;
+    document.querySelector('#outputUSGallonperMinute').innerHTML = usgpm;
+    var mld = valNum/11.574;
+    document.querySelector('#outputMegalitresperday').innerHTML = mld;
+    var kih = valNum*3.6;
+    document.querySelector('#outputKilolitresperHours').innerHTML = kih;
+}
+</script>
+</html>

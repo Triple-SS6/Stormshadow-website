@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Calculate Mass</h1>
+        <p>
+            <label>Ton: &nbsp;&nbsp;</label>
+            <input type="number" id="inputTon" placeholder="Ton" oninput="MassConverterTon(this.value)" onchange="MassConverterTon(this.value)">
+            <span id="outputTon"></span>
+        </p>
+        <p>
+            <label>Tonne: &nbsp;&nbsp;</label>
+            <input type="number" id="inputTonne" placeholder="Tonne" oninput="MassConverterTonne(this.value)" onchange="MassConverterTonne(this.value)">
+            <span id="outputTonne"></span>
+        </p>
+        <p>
+            <label>Pound (Ib): &nbsp;&nbsp;</label>
+            <input type="number" id="inputPound" placeholder="Pound" oninput="MassConverterPound(this.value)" onchange="MassConverterPound(this.value)">
+            <span id="outputPound"></span>
+        </p>
+        <p>
+            <label>Kilogram (Kg): &nbsp;&nbsp;</label>
+            <input type="number" id="inputKilogram" placeholder="Kilogram" oninput="MassConverterKilogram(this.value)" onchange="MassConverterKilogram(this.value)">
+            <span id="outputKilogram"></span>
+        </p>
+    </div>
+</body>
+
+<script>
+function MassConverterTon(valNum) {
+    var tonne = valNum*1.016;
+    document.querySelector('#outputTonne').innerHTML = tonne;
+    var pound = valNum*2240;
+    document.querySelector('#outputPound').innerHTML = pound;
+    var kilogram = valNum*(1016);
+    document.querySelector('#outputKilogram').innerHTML = kilogram;
+}
+
+function MassConverterTonne(valNum) {
+    var ton = valNum*0.984;
+    document.querySelector('#outputTon').innerHTML = ton;
+    var pound = valNum*2205;
+    document.querySelector('#outputPound').innerHTML = pound;
+    var kilogram = valNum*(1000);
+    document.querySelector('#outputKilogram').innerHTML = kilogram;
+}
+
+function MassConverterPound(valNum) {
+    var ton = valNum/2240;
+    document.querySelector('#outputTon').innerHTML = ton;
+    var tonne = valNum/2205;
+    document.querySelector('#outputTonne').innerHTML = tonne;
+    var kilogram = valNum/2.205;
+    document.querySelector('#outputKilogram').innerHTML = kilogram;
+}
+
+function MassConverterKilogram(valNum) {
+    var ton = valNum/1016;
+    document.querySelector('#outputTon').innerHTML = ton;
+    var tonne = valNum/1000;
+    document.querySelector('#outputTonne').innerHTML = tonne;
+    var pound = valNum*2.20462;
+    document.querySelector('#outputPound').innerHTML = pound;
+}
+</script>
+</html>

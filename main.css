@@ -56,6 +56,7 @@ body {
     height: calc(100vh - 2px);
     background-color: black;
     color: whitesmoke;
+    line-height: 1.5;
     /* flex-grow: 1; */
 }
 .darkMode {
@@ -63,37 +64,66 @@ body {
     color: black;
 }
 .sidebar {
-    max-width: 220px;
-    height: 100%;
+    max-width: 230px;
+    height: calc(90%);
     display: none;
-    /* float: left; */
-    position: absolute;
+    position: fixed;
     left: 0;
-    background-color: #555;
+    background-color: rgb(61, 121, 170);
     z-index: 999;
     flex-direction: column;
+    overflow: auto;
 }
-
 .sidebar a {
     margin: 0;
-    /* padding: 10px 16px; */
+    padding: 0 10px;
     color: yellow;
-    background-color: rgb(61, 121, 170);
     font-size: 20px;
     text-decoration: none;
 }
 .sidebar a:hover {
-    padding: 5px 16px;;
+    padding: 5px 16px;
     color: rgb(5, 5, 5);
     background-color: rgb(225, 65, 217);
     font-size: 28px;
 }
+.sidebar .dropdownContent:hover {
+    position: relative;
+    border-radius: 0;
+    max-width: 220px;
+}
+.navbar a:link {
+    color: blue;
+    border-radius: 15px;
+    line-height: 28px;
+}
+
+.navbar a:visited {
+    color: rgb(18, 19, 18);
+}
+.navbar a:hover {
+    color: white;
+    background-color: royalblue;
+    font-weight: bolder;
+    overflow: auto; 
+}
+/* .navbar a:active {
+    background-color: rgb(225, 156, 65);
+    color: rgb(43, 226, 98);
+} */
+
 header {
     position: relative;
     top: 0;
     height: 40px;
     display: flex;
     background-color: rgb(233, 88, 4);
+    letter-spacing: 1px;
+    /* overflow: auto; */
+    scrollbar-width: none;
+    z-index: 2;
+    width: 100%;
+    white-space: nowrap;
 }
 .navbar {
     position: absolute;
@@ -101,14 +131,39 @@ header {
     top: 8px;
     line-height: 28px;
 }
+main {
+    padding: 0 22px;
+}
 footer {
-    position: fixed;
-    bottom: 10px;
-    right: 50%;
+    /* position: fixed; */
+    margin-bottom: 10px;
+    text-align: center;
     font-size: 18px;
+    font-weight: bolder;
     /* background-color: rgb(143, 62, 62); */
 }
 
+.name {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    background-color: blue;
+    font-size: x-large;
+    font-style: oblique;
+    text-align: center;
+}
+input {
+    padding-left: 16px;
+    border-radius: 60px;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+}
+/* .searchContainer:hover {
+    background: #ccc;
+    width: 5px;
+} */
 .container {
     cursor: pointer;
     float: left;

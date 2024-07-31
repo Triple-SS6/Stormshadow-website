@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="autoDropdown.css">
+    <link rel="stylesheet" href="main3.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="navbar">    
+            <ul class="contentHeader">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">My Projects</a>
+                    <div class="dropdownContent">
+                        <a href="M calc/index.html">Calculator App</a>
+                        <a href="SolarDesign/solar.html">Solar sizing</a>
+                    </div>
+                </li>
+                <li><a href="calculations.html">Calculations</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="length.html">Length</a>
+                        <a href="area.html">Area</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="force.html">Force</a>
+                        <a href="pressure.html">Pressure & Stress</a>
+                        <a href="velocity.html">Velocity</a>
+                        <a href="volumetricFlow.html">Volumetric Flow</a>
+                        <a href="density.html">Density</a>
+                        <a href="torque.html">Torque</a>
+                    </div>
+                </li>
+                <li><a href="audio & video/audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <h1 class="name">AM STATIONERY</h1>
+
+    <main>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtnProjects"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    My Projects  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+
+                <div class="dropdownContentProjects">
+                    <a href="M calc/index.html">Calculator App</a>
+                    <a href="SolarDesign/solar.html">Solar sizing</a>
+                </div>
+            </div>
+            <a href="calculations.html">Calculations</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtn"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    Converter  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdownContentProjects">
+                    <a href="length.html">Length</a>
+                    <a href="area.html">Area</a>
+                    <a href="volume.html">Volume</a>
+                    <a href="mass.html">Mass</a>
+                    <a href="force.html">Force</a>
+                    <a href="pressure.html">Pressure & Stress</a>
+                    <a href="velocity.html">Velocity</a>
+                    <a href="volumetricFlow.html">Volumetric Flow</a>
+                    <a href="density.html">Density</a>
+                    <a href="torque.html">Torque</a>
+                </div>
+            </div>
+            <a href="audio & video/audio.html">Audio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="content">
+            <audio controls>
+                <source src="_Some_Nights_[OFFICIAL_VIDEO](128k).m4a">
+            </audio>
+                <p>
+                    Download <a href="_Some_Nights_[OFFICIAL_VIDEO](128k).m4a" download="_Some_Nights_">Some Nights</a>  .MP4
+                </p>
+            <audio controls>
+                <source src="A Pass - Chupa Ku Chupa.mp3">
+            </audio>
+                <p>
+                    Download <a href="A Pass - Chupa Ku Chupa.mp3" download="A Pass - Chupa Ku Chupa.mp3">A Pass - Chupa Ku Chupa.mp3</a>
+                </p>
+            <audio controls>
+                <source src="216_Whisky_-_GORE_Ft._Mr_Attention__Official_Video_(128k).m4a">
+            </audio>
+                <p>
+                    Download <a href="216_Whisky_-_GORE_Ft._Mr_Attention__Official_Video_(128k).m4a" download="216_Whisky_-_GORE_Ft._Mr_Attention__Official_Video_(128k).m4a">Whisky_-_GORE_Ft._Mr_Attention</a>  .MP4
+                </p>
+            
+            <video controls>
+                <source src="Bitdefender_Total_Security_2019.mp4">
+            </video>        
+                <p>
+                    <a href="Bitdefender_Total_Security_2019.mp4">Bitdefender_Total_Security_2019 tutorial.mp4</a>
+                </p>
+        
+            <video controls>
+                <source src="Adobe_Premiere_Pro_2023.mp4">
+            </video>
+                <p>
+                    <a href="Adobe_Premiere_Pro_2023.mp4">Adobe_Premiere_Pro_2023 tutorial.mp4</a>
+                </p>        
+        </div>
+    </main>
+<footer>
+    <!-- &lt;&lt;&lt; &copy; <span class="year"></span> <a href="contact">Stormshadow6</a> &gtrdot;&gtrdot;&gtrdot; -->
+    &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
+</footer>
+</body>
+<script src="scripts.js"></script>
+</html>

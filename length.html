@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="default.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Area</title>
+</head>
+<body>
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="navbar">    
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="length.html">Length</a>
+                        <a href="area.html">Area</a>
+                        <a href="weight.html">Weight</a>
+                        <a href="#">Converter</a>
+                        <a href="#">Converter</a>
+                    </div>
+                </li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>    
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <main>
+        <div class="sidebar">
+        </div>
+        
+        <div class="content">
+            <h1>Calculate Length</h1>
+            <p>
+                <label>Feet: &nbsp;&nbsp;</label>
+                <span id="outputFeet"> 
+                    <input type="number" id="inputFeet" placeholder="Feet" oninput="lengthConverterFeet(this.value)" onchange="lengthConverterFeet(this.value)">
+                </span>
+            </p>
+            <p>
+                <label>Kilometers: &nbsp;&nbsp;</label>
+                <span id="outputKilometers">
+                    <input type="number" id="inputKilometer" placeholder="Kilometer" oninput="lengthConverterKilometer(this.value)" onchange="lengthConverterKilometer(this.value)">
+                </span>
+            </p>
+            <p>
+                <label>Meters: &nbsp;&nbsp;</label>
+                <span id="outputMeters">
+                    <input type="number" id="inputMeter" placeholder="Meter" oninput="lengthConverterMeter(this.value)" onchange="lengthConverterMeter(this.value)">
+                </span>
+            </p>
+            <p>
+                <label>Inches: &nbsp;&nbsp;</label>
+                <span id="outputInches">
+                    <input type="number" id="inputInch" placeholder="Inch" oninput="lengthConverterInch(this.value)" onchange="lengthConverterInch(this.value)">
+                </span>
+            </p>
+            <p>
+                <label>Cms: &nbsp;&nbsp;</label>
+                <span id="outputCms">
+                    <input type="number" id="inputCm" placeholder="Cm" oninput="lengthConverterCm(this.value)" onchange="lengthConverterCm(this.value)">
+                </span>
+            </p>
+            <p>
+                <label>Yards: &nbsp;&nbsp;</label>
+                <span id="outputYards">
+                    <input type="number" id="inputYard" placeholder="Yard" oninput="lengthConverterYard(this.value)" onchange="lengthConverterYard(this.value)">
+                </span>
+            </p>
+            <p>
+                <label>Miles: &nbsp;&nbsp;</label>
+                <span id="outputMiles">
+                    <input type="number" id="inputMile" placeholder="Mile" oninput="lengthConverterMile(this.value)" onchange="lengthConverterMile(this.value)">
+                </span>
+            </p>
+            <!-- <p>
+                <label>Millimeters: &nbsp;&nbsp;</label> -->
+                <!-- <span id="outputMillimeters">
+                    <input type="number" id="inputMillimeter" placeholder="Millimeter" oninput="lengthConverterMillimeter(this.value)" onchange="lengthConverterMillimeter(this.value)">
+                </span>
+            </p> -->
+        </div>
+    </main>
+</body>    
+<footer>
+    <!-- &lt;&lt;&lt; &copy; <span class="year"></span> <a href="contact">Stormshadow6</a> &gtrdot;&gtrdot;&gtrdot; -->
+    &copy; <span class="year"></span> <a href="contact.html">Stormshadow6</a>
+</footer>
+<script src="scriptsLength.js"></script>
+<script src="scripts.js"></script>
+</html>
+
+    <!-- <div>
+        <button class="btn"><i class="fa fa-home"></i></button>
+        <button class="btn"><i class="fa fa-envelope"></i></button>
+        <button class="btn"><i class="fa fa-folder"></i></button>
+        <button class="btn"><i class="fa fa-close"></i></button>
+    </div> -->

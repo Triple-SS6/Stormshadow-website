@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="autoDropdown.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="main1.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="navbar">    
+            <ul class="contentHeader">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">My Projects</a>
+                    <div class="dropdownContent">
+                        <a href="M calc/index.html">Calculator App</a>
+                        <a href="SolarDesign/solar.html">Solar sizing</a>
+                    </div>
+                </li>
+                <li><a href="calculations.html">Calculations</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="length.html">Length</a>
+                        <a href="area.html">Area</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="force.html">Force</a>
+                        <a href="pressure.html">Pressure & Stress</a>
+                        <a href="velocity.html">Velocity</a>
+                        <a href="volumetricFlow.html">Volumetric Flow</a>
+                        <a href="density.html">Density</a>
+                        <a href="torque.html">Torque</a>
+                    </div>
+                </li>
+                <li><a href="audio & video/audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <h1 class="name">AM STATIONERY</h1>
+
+    <main>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtnProjects"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    My Projects  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+
+                <div class="dropdownContentProjects">
+                    <a href="M calc/index.html">Calculator App</a>
+                    <a href="SolarDesign/solar.html">Solar sizing</a>
+                </div>
+            </div>
+            <a href="calculations.html">Calculations</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtn"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    Converter  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdownContentProjects">
+                    <a href="length.html">Length</a>
+                    <a href="area.html">Area</a>
+                    <a href="volume.html">Volume</a>
+                    <a href="mass.html">Mass</a>
+                    <a href="force.html">Force</a>
+                    <a href="pressure.html">Pressure & Stress</a>
+                    <a href="velocity.html">Velocity</a>
+                    <a href="volumetricFlow.html">Volumetric Flow</a>
+                    <a href="density.html">Density</a>
+                    <a href="torque.html">Torque</a>
+                </div>
+            </div>
+            <a href="audio & video/audio.html">Audio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="content">
+            <header><strong>Calculations simplified</strong></header>
+            <div class="calculator">
+                <pre class="display" id="display">0</pre>
+                <div class="buttons">
+                    <div class="buttons-five">
+                        <button onclick="logTwo();">log<sub>2</sub></button>
+                        <button onclick="logTen();">log<sub>10</sub></button>
+                        <button onclick="lin();">Ln</button>
+                        <button onclick="e();"><strong>e</strong></button>
+                        <button onclick="clearDisplay();">CE</button>
+                        
+                        <button onclick="squareRoot();">sqrt x</button>
+                        <button onclick="cubeRoot();">cbrt x</button>
+                        <button onclick="squared();">x<sup>2</sup></button>
+                        <button onclick="xPowerThree();">x<sup>3</sup></button>
+                        <button onclick="clearLastElement();">DEL</button>
+                        
+                        <button onclick="sine();">sin x</button>
+                        <button onclick="cosine();">cos x</button>
+                        <button onclick="tan(',');">tan x</button>
+                        <button onclick="tenPower();">10<sup>x</sup></button>
+                        <button onclick="xPowerY();">x<sup>y</sup></button>
+                        
+                        <button onclick="pi();">PI</button>
+                        <button onclick="insertNumber(',');">,</button>
+                        <button onclick = "insertNumber('(');">(</button>
+                        <button onclick = "insertNumber(')');">)</button>
+                        <button onclick = "insertNumber('/');">/</button>
+                    </div>
+                    <div class="buttons-four">
+                        <button onclick = "insertNumber('7');">7</button>
+                        <button onclick = "insertNumber('8');">8</button>
+                        <button onclick = "insertNumber('9');">9</button>
+                        <button onclick = "insertNumber('*');">*</button>
+                        
+                        <button onclick = "insertNumber('4');">4</button>
+                        <button onclick = "insertNumber('5');">5</button>
+                        <button onclick = "insertNumber('6');">6</button>
+                        <button onclick = "insertNumber('-');">-</button>
+            
+                        <button class="one" onclick = "insertNumber('1');">1</button>
+                        <button class="two" onclick = "insertNumber('2');">2</button>
+                        <button class="three" onclick = "insertNumber('3');">3</button>
+                        <button class="add" onclick = "insertNumber('+');">+</button>
+            
+                        <button class="percentage" onclick = "insertNumber('%');">%</button>
+                        <button class="zero" onclick = "insertNumber('0');">0</button>
+                        <button class="point" onclick = "insertNumber('.');">.</button>
+                        <button onclick="total()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <!-- &lt;&lt;&lt; &copy; <span class="year"></span> <a href="contact">Stormshadow6</a> &gtrdot;&gtrdot;&gtrdot; -->
+        &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
+    </footer>
+</body>
+<script src="scripts1.js"></script>
+<script src="scripts.js"></script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculations</title>
+</head>
+<body>
+    <div id="Input-for-Areas">
+        <h2>Calculate for a Cubic sided vessel</h2>
+        <p>Length (m): <input type="number" class="length" placeholder="Length"></p>
+        <p>Width (m): <input type="number" class="width" placeholder="Width"></p>
+        <p>Height (m): <input type="number" class="height" placeholder="Height"></p>
+
+        <strong>Area (m<sup>2</sup>) : <span class="areaz"></span></strong> 
+        <br>
+        <strong>Volume (m<sup>3</sup>) : <span class="volumez"></span></strong>
+        <p><button onclick="area();">Calculate</button></p>
+    </div>
+
+    <div id="flow-rate-non-circular">
+        <h3>Calculate Flow rate (Q) </h3>
+        <p>Time (s): <input type="number" class="time" placeholder="Time"></p>
+        <p><strong>Velocity (m/s): <span class="velocity"></span></strong></p>
+
+        <strong>
+            <label>Flow rate (m<sup>3</sup>/s)</label>
+            <select name="flowrate" class="flowRr">
+                <optgroup label="use Area/Volume values">
+                    <option>Area</option>
+                    <option>Volume</option>
+                </optgroup>
+            </select> &nbsp;:
+            &nbsp;&nbsp;<span class="flowRatez"></span>
+        </strong>
+        <p><button onclick="flow();">Calculate</button></p>
+    </div>
+
+    <div id="inputForCircleArea">
+        <h2>Calculate for the Circle</h2>
+        <strong>
+            Area (m<sup>2</sup>)
+            <select class="circleArea">
+                <optgroup label="choose values use">
+                    <option>Radius</option>
+                    <option>Diameter</option>
+                </optgroup>
+            </select> &nbsp;:
+            <input type="number" class="cirArea" placeholder="Value for chosen input">
+            &nbsp;&nbsp;<span class="circleA"></span>
+        </strong>
+        <br>
+        <strong>
+            Volume (m<sup>3</sup>)
+            <select class="circleVolume">
+                <optgroup label="choose values use">
+                    <option>Radius</option>
+                    <option>Diameter</option>
+                </optgroup>
+            </select> &nbsp;:
+            <input type="number" class="cirVolume" placeholder="Value for chosen input">
+            <input type="number" class="cirLength" placeholder="Input Length">
+            &nbsp;&nbsp;<span class="circleV"></span>
+        </strong>
+        <p><button onclick="circle();">Calculate</button></p>
+    </div>
+    
+    <div class="definitions">
+        <p>
+            <details>
+                <b><u>Definitions:</u></b>
+                <aside>
+                    <strong>Wetted Perimeter</strong>  is the portion of the channel in contact with the flowing fluid.
+                    <strong></strong>
+                </aside>
+            </details>
+        </p>
+    </div>
+
+    <div class="hydraulics">
+        <h3>Calculate Hydraulics radius;</h3>
+        <div>
+            <p>
+                <label for="area">Area (m<sup>2</sup>): </label>
+                <input type="number" id="area" placeholder="Area">
+            </p>
+            <p>
+                <label for="perimeter">Wetted perimeter (m):</label>
+                <input type="number" id="perimeter" placeholder="Wetted perimeter">
+            </p>
+            <p>
+                <label for="pipeDiameter">Pipe Diameter (m):</label>
+                <input type="number" id="pipeDiameter" placeholder="Pipe Diameter">
+            </p>
+        </div>
+        <div>
+            <ol>
+                <li>
+                    <strong>for Non-Circular pipe (m): <span class="nonCircular"></span></strong>
+                </li>
+                <button class="nonCircular" onclick="HrNCircular();">Calculate</button>
+                <li>
+                    <strong>for Circular pipe (m): <span class="circular"></span></strong> 
+                </li>
+                <button class="circular" onclick="HrCircular();">Calculate</button>
+            </ol>
+        </div>
+    </div>
+
+    <div class="ReynoldsNumber">
+        <h3>Calculate Reynolds Number</h3>
+        <p>
+            <label>Flow (input if it runs in open/closed channels): </label>
+            <select name="flow" class="conduit">
+                <option>Open</option>
+                <option>Closed</option>
+            </select>
+        </p>
+        <p>
+            <label>Velocity (m/s): </label>
+            <input type="number" placeholder="Velocity" class="velo">
+        </p>
+        <p>
+            <label>Hydraulics radius (R): </label>
+            <input type="number" placeholder="Hydraulics radius" class="hydradius">
+        </p>
+        <p>
+            <label>Kinematic Viscosity for the fluid : </label>
+            <input type="number" placeholder="Viscosity" class="viscosity">
+        </p>
+
+        <strong>
+            Reynolds Number (Re) : <span class="reynold"></span>
+            <p><span class="message"></span></p>
+        </strong>
+        <p><button onclick="reynoldsNo();">Calculate</button></p>
+        
+    </div>
+
+    <div id="pressure"></div>
+</body>
+<script src="calculations.js"></script>
+</html>

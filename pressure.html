@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressure</title>
+</head>
+<body>
+    
+    <div class="content">
+        <h1>Calculate Pressure & Stress</h1>
+        <p>
+            <label>Megapascal (Mpa): &nbsp;&nbsp;</label>
+            <input type="number" id="inputMegapascal" placeholder="Megapascal" oninput="PressureConverterMegapascal(this.value)" onchange="PressureConverterMegapascal(this.value)">
+            <span id="outputMegapascal"></span>
+        </p>
+        <p>
+            <label>Kilopascal (Kpa): &nbsp;&nbsp;</label>
+            <input type="number" id="inputKilopascal" placeholder="Kilopascal" oninput="PressureConverterKilopascal(this.value)" onchange="PressureConverterKilopascal(this.value)">
+            <span id="outputKilopascal"></span>
+        </p>
+        <p>
+            <label>Pascal (pa): &nbsp;&nbsp;</label>
+            <input type="number" id="inputPascal" placeholder="Pascal" oninput="PressureConverterPascal(this.value)" onchange="PressureConverterPascal(this.value)">
+            <span id="outputPascal"></span>
+        </p>
+        <p>
+            <label>Atmosphere (ATM or ATU): &nbsp;&nbsp;</label>
+            <input type="number" id="inputAtmosphere" placeholder="Atmosphere" oninput="PressureConverterAtmosphere(this.value)" onchange="PressureConverterAtmosphere(this.value)">
+            <span id="outputAtmosphere"></span>
+        </p>
+        <p>
+            <label>Kilogram Force per Square Centimetre (Kgf/cm<sup>2</sup>): &nbsp;&nbsp;</label>
+            <input type="number" id="inputKilogramForceperSquareCentimetre" placeholder="KilogramForceperSquareCentimetre" oninput="PressureConverterKilogramForceperSquareCentimetre(this.value)" onchange="PressureConverterKilogramForceperSquareCentimetre(this.value)">
+            <span id="outputKilogramForceperSquareCentimetre"></span>
+        </p>
+        <p>
+            <label>Newtons per Square Millimetre (N/mm<sup>2</sup>): &nbsp;&nbsp;</label>
+            <input type="number" id="inputNewtonsperSquareMillimetre" placeholder="NewtonsperSquareMillimetre" oninput="PressureConverterNewtonsperSquareMillimetre(this.value)" onchange="PressureConverterNewtonsperSquareMillimetre(this.value)">
+            <span id="outputNewtonsperSquareMillimetre"></span>
+        </p>
+        <p>
+            <label>Pound Force per Square Inch (Ibf/in<sup>2</sup>): &nbsp;&nbsp;</label>
+            <input type="number" id="inputPoundForceperSquareInch" placeholder="PoundForceperSquareInch" oninput="PressureConverterPoundForceperSquareInch(this.value)" onchange="PressureConverterPoundForceperSquareInch(this.value)">
+            <span id="outputPoundForceperSquareInch"></span>
+        </p>
+        <p>
+            <label>Foot Head Water (FHW): &nbsp;&nbsp;</label>
+            <input type="number" id="inputFootHeadWater" placeholder="FootHeadWater" oninput="PressureConverterFootHeadWater(this.value)" onchange="PressureConverterFootHeadWater(this.value)">
+            <span id="outputFootHeadWater"></span>
+        </p>
+        <p>
+            <label>Metre Head Water (MHW): &nbsp;&nbsp;</label>
+            <input type="number" id="inputMetreHeadWater" placeholder="MetreHeadWater" oninput="PressureConverterMetreHeadWater(this.value)" onchange="PressureConverterMetreHeadWater(this.value)">
+            <span id="outputMetreHeadWater"></span>
+        </p>
+        <p>
+            <label>Bar : &nbsp;&nbsp;</label>
+            <input type="number" id="inputBar" placeholder="Bar" oninput="PressureConverterBar(this.value)" onchange="PressureConverterBar(this.value)">
+            <span id="outputBar"></span>
+        </p>
+    </div>
+</body>
+<script>
+function PressureConverterMegapascal(valNum) {
+    var kpa = valNum*1000;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*1000000;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*9.86923267;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum*10.1971621;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum*1;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum*145.038;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*334.552566;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*101.997733;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum*10;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterKilopascal(valNum) {
+    var mpa = valNum/1000;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var pa = valNum*1000;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*0.009869;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum*0.01019;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum/1000;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum/6.895;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*0.334638;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum/10;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum/100;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterPascal(valNum) {
+    var mpa = valNum/1000000;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum/1000;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var atm = valNum/101300;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum/98070;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum/1000000;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum/6895;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*0.000334638;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*0.0001;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum/100000;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterAtmosphere(valNum) {
+    var mpa = valNum/9.869;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*101.325;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*101325;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var kgfcm = valNum*1.03323;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum/9.869;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum*14.6959;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*33.9;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*10.33227;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum*1.013;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterKilogramForceperSquareCentimetre(valNum) {
+    var mpa = valNum*0.0980665;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*98.0665;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*98066.5;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*0.96784;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var nmm = valNum*0.0980665;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum*14.2233;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*32.808399;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*10;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum*0.980665;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterNewtonsperSquareMillimetre(valNum) {
+    var mpa = valNum*1;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*1000;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*1000000;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*9.869;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum*10.197;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var ibfin = valNum*145.038;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*334.552566;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*101.9977;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum*10;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterPoundForceperSquareInch(valNum) {
+    var mpa = valNum/145;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*6.89476;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*6894.757;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum/14.696;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum/14.223;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum/145;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var fhw = valNum*2.30947;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*0.7032496;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum/14.504;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterFootHeadWater(valNum) {
+    var mpa = valNum*0.003;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*2.9890669;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*2989.0669;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*0.0295;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum*0.03047219;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum*0.0029890669;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum*0.433;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var mhw = valNum*0.304878;///
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+    var bar = valNum*0.0299;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterMetreHeadWater(valNum) {
+    var mpa = valNum*0.009806;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*9.8064;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*9806.38;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*0.09678;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum*0.099997;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum*0.009804;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum*1.422;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*3.28;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var bar = valNum*0.098;
+    document.querySelector('#outputBar').innerHTML = bar;
+}
+
+function PressureConverterBar(valNum) {
+    var mpa = valNum*0.1;
+    document.querySelector('#outputMegapascal').innerHTML = mpa;
+    var kpa = valNum*100;
+    document.querySelector('#outputKilopascal').innerHTML = kpa;
+    var pa = valNum*100000;
+    document.querySelector('#outputPascal').innerHTML = pa;
+    var atm = valNum*0.9869;
+    document.querySelector('#outputAtmosphere').innerHTML = atm;
+    var kgfcm = valNum*1;
+    document.querySelector('#outputKilogramForceperSquareCentimetre').innerHTML = kgfcm;
+    var nmm = valNum*0.1;
+    document.querySelector('#outputNewtonsperSquareMillimetre').innerHTML = nmm;
+    var ibfin = valNum*14.50377;
+    document.querySelector('#outputPoundForceperSquareInch').innerHTML = ibfin;
+    var fhw = valNum*33.4552566;
+    document.querySelector('#outputFootHeadWater').innerHTML = fhw;
+    var mhw = valNum*10.1974;
+    document.querySelector('#outputMetreHeadWater').innerHTML = mhw;
+}
+
+</script>
+</html>
