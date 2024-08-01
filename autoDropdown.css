@@ -112,7 +112,7 @@ button {
     color: black;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 280px) {
     .container {
         display: block;
     }    
@@ -120,7 +120,7 @@ button {
         display: none;
     }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
     .container {
         display: none;
     }    
