@@ -1,13 +1,13 @@
-html {
+/* html {
     background-color: aquamarine;
     margin: 50px 20px;
     padding: 20px;
     max-height: 100vh;
     max-width: 80%;
-}
+} */
 
 video {
     margin: 40px;
-    max-width: 80vh;
+    max-width: 75vh;
     border-radius: 5px;
 }

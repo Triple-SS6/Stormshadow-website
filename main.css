@@ -142,7 +142,9 @@ footer {
     font-weight: bolder;
     /* background-color: rgb(143, 62, 62); */
 }
-
+.footer {
+    clear: both;
+}
 .name {
     margin: 0;
     padding: 0;
@@ -155,9 +157,10 @@ footer {
 }
 input {
     padding-left: 16px;
-    border-radius: 60px;
-    font-size: larger;
+    border-radius: 10px;
+    font-size: large;
     border: none;
+    outline: 2px black solid;
     cursor: pointer;
 }
 /* .searchContainer:hover {

@@ -136,4 +136,37 @@ function reynoldsNo() {
     }
 }
 
+function pressure() {
+    const inputElementM = document.querySelector('.presMass');
+    const mass = inputElementM.value;
+    const inputElementAr = document.querySelector('.presArea');
+    const area = inputElementAr.value;
 
+    const pressure1 = mass/area;
+    document.querySelector('.pressu').innerHTML = pressure1;
+}
+
+function density() {
+    const inputElementM = document.querySelector('.densityMass');
+    const mass = inputElementM.value;
+    const inputElementAr = document.querySelector('.densityVolume');
+    const volume = inputElementAr.value;
+
+    const dens = mass/volume;
+    document.querySelector('.densi').innerHTML = dens;
+}
+
+function energyHead() {
+    const inputElementcircleEp = document.querySelector('.energyPressure');
+    const p = Number(inputElementcircleEp.value);
+    const inputElementcircleEw = document.querySelector('.energyWeight');
+    const w = Number(inputElementcircleEw.value);
+    const inputElementcircleEz = document.querySelector('.energyElevation');
+    const z = Number(inputElementcircleEz.value);
+    const inputElementEv = document.querySelector('.energyVelocity');
+    const v = Number(inputElementEv.value);
+    const g = Number(9.81);
+
+    const H = z + (p/(w*g))+((Math.pow(v,2))/(2*g));
+    document.querySelector('.energyHd').innerHTML = H;
+}

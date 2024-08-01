@@ -114,7 +114,7 @@ function squareRoot() {
     const sqrt = Math.sqrt(result);
     
     currentDisplay = currentDisplay.slice(20,-1);
-    insertNumber(`Sqrt (${result})`);
+    insertNumber(`<strong>&#8730</strong> (${result})`);
     currentDisplay += '\n' + sqrt.toFixed(5);
 
     resultDisplay = true;
@@ -126,7 +126,7 @@ function cubeRoot() {
     const cbRt = Math.cbrt(result);
     
     currentDisplay = currentDisplay.slice(20,-1);
-    insertNumber(`Cbrt (${result})`);
+    insertNumber(`<strong>&#8731</strong> (${result})`);
     currentDisplay += '\n' + cbRt;
 
     resultDisplay = true;

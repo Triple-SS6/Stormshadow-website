@@ -31,16 +31,16 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Converter</a>
                     <div class="dropdownContent">
-                        <a href="length.html">Length</a>
                         <a href="area.html">Area</a>
-                        <a href="volume.html">Volume</a>
-                        <a href="mass.html">Mass</a>
+                        <a href="density.html">Density</a>
                         <a href="force.html">Force</a>
+                        <a href="length.html">Length</a>
+                        <a href="mass.html">Mass</a>
                         <a href="pressure.html">Pressure & Stress</a>
+                        <a href="torque.html">Torque</a>
+                        <a href="volume.html">Volume</a>
                         <a href="velocity.html">Velocity</a>
                         <a href="volumetricFlow.html">Volumetric Flow</a>
-                        <a href="density.html">Density</a>
-                        <a href="torque.html">Torque</a>
                     </div>
                 </li>
                 <li><a href="audio & video/audio.html">Audio</a></li>
@@ -77,30 +77,55 @@
                     Converter  <i id="arrow" class="fas fa-caret-down"></i>
                 </button>
                 <div class="dropdownContentProjects">
-                    <a href="length.html">Length</a>
                     <a href="area.html">Area</a>
-                    <a href="volume.html">Volume</a>
-                    <a href="mass.html">Mass</a>
+                    <a href="density.html">Density</a>
                     <a href="force.html">Force</a>
+                    <a href="length.html">Length</a>
+                    <a href="mass.html">Mass</a>
                     <a href="pressure.html">Pressure & Stress</a>
+                    <a href="torque.html">Torque</a>
+                    <a href="volume.html">Volume</a>
                     <a href="velocity.html">Velocity</a>
                     <a href="volumetricFlow.html">Volumetric Flow</a>
-                    <a href="density.html">Density</a>
-                    <a href="torque.html">Torque</a>
                 </div>
             </div>
-            <a href="audio & video/audio.html">Audio</a>
+            <a href="/audio & video/audio.html">Audio</a>
             <a href="contact.html">Contact</a>
         </div>
 
         <div class="content">
+            <div class="dealing">
+                <p>Dealers in: 
+                    <ul>
+                        <li class="contentSidebar">Printing Invoices, Receipts etc</li>
+                        <li class="contentSidebar">Typing & Editing all documents </li>
+                        <li class="contentSidebar">Designing Business, Wedding, Invitation & other cards</li>
+                        <li class="contentSidebar">Printing Photos</li>
+                        <li class="contentSidebar">Website develop</li>
+                        <li class="contentSidebar">Selling Office, School items and Scholarstic materials</li>
+                        <li class="contentSidebar">Binding and Laminating documents</li>
+                        <li class="contentSidebar">Teaching Computer studies &</li>
+                        <li class="contentSidebar">Other stationery related work</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="prdts">
+                <p>Incase of any feedback you can contact us.</p>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <!-- &lt;&lt;&lt; &copy; <span class="year"></span> <a href="contact">Stormshadow6</a> &gtrdot;&gtrdot;&gtrdot; -->
         &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
     </footer>
 </body>
-<script src="scripts.js"></script>
+    <script>
+        const collection = document.getElementsByClassName("contentSidebar");
+        for (let i = 0; i < collection.length; i++) {
+        collection[i].style.float = "none";
+        }
+    </script>
+    <script src="scripts.js"></script>
 </html>

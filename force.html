@@ -3,47 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="autoDropdown.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
     <title>Force</title>
 </head>
 <body>
-    <div class="content">
-        <h1>Calculate Force</h1>
-        <p>
-            <label>Pound Force (Ibf): &nbsp;&nbsp;</label>
-            <input type="number" id="inputPoundForce" placeholder="PoundForce" oninput="ForceConverterPoundForce(this.value)" onchange="ForceConverterPoundForce(this.value)">
-            <span id="outputPoundForce"></span>
-        </p>
-        <p>
-            <label>Kilogram Force (Kgf): &nbsp;&nbsp;</label>
-            <input type="number" id="inputKilogramForce" placeholder="KilogramForce" oninput="ForceConverterKilogramForce(this.value)" onchange="ForceConverterKilogramForce(this.value)">
-            <span id="outputKilogramForce"></span>
-        </p>
-        <p>
-            <label>Newton (N): &nbsp;&nbsp;</label>
-            <input type="number" id="inputNewton" placeholder="Newton" oninput="ForceConverterNewton(this.value)" onchange="ForceConverterNewton(this.value)">
-            <span id="outputNewton"></span>
-        </p>
-    
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="navbar">    
+            <ul class="contentHeader">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">My Projects</a>
+                    <div class="dropdownContent">
+                        <a href="M calc/index.html">Calculator App</a>
+                        <a href="SolarDesign/solar.html">Solar sizing</a>
+                    </div>
+                </li>
+                <li><a href="calculations.html">Calculations</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="area.html">Area</a>
+                        <a href="density.html">Density</a>
+                        <a href="force.html">Force</a>
+                        <a href="length.html">Length</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="pressure.html">Pressure & Stress</a>
+                        <a href="torque.html">Torque</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="velocity.html">Velocity</a>
+                        <a href="volumetricFlow.html">Volumetric Flow</a>
+                    </div>
+                </li>
+                <li><a href="audio & video/audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <h1 class="name">AM STATIONERY</h1>
+
+    <main>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtnProjects"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    My Projects  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+
+                <div class="dropdownContentProjects">
+                    <a href="M calc/index.html">Calculator App</a>
+                    <a href="SolarDesign/solar.html">Solar sizing</a>
+                </div>
+            </div>
+            <a href="calculations.html">Calculations</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtn"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    Converter  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdownContentProjects">
+                    <a href="area.html">Area</a>
+                    <a href="density.html">Density</a>
+                    <a href="force.html">Force</a>
+                    <a href="length.html">Length</a>
+                    <a href="mass.html">Mass</a>
+                    <a href="pressure.html">Pressure & Stress</a>
+                    <a href="torque.html">Torque</a>
+                    <a href="volume.html">Volume</a>
+                    <a href="velocity.html">Velocity</a>
+                    <a href="volumetricFlow.html">Volumetric Flow</a>
+                </div>
+            </div>
+            <a href="audio & video/audio.html">Audio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="content">
+            <h1>Calculate Force</h1>
+            <p>
+                <label>Pound Force (Ibf): &nbsp;&nbsp;</label>
+                <input type="number" id="inputPoundForce" placeholder="PoundForce" oninput="ForceConverterPoundForce(this.value)" onchange="ForceConverterPoundForce(this.value)">
+                <span id="outputPoundForce"></span>
+            </p>
+            <p>
+                <label>Kilogram Force (Kgf): &nbsp;&nbsp;</label>
+                <input type="number" id="inputKilogramForce" placeholder="KilogramForce" oninput="ForceConverterKilogramForce(this.value)" onchange="ForceConverterKilogramForce(this.value)">
+                <span id="outputKilogramForce"></span>
+            </p>
+            <p>
+                <label>Newton (N): &nbsp;&nbsp;</label>
+                <input type="number" id="inputNewton" placeholder="Newton" oninput="ForceConverterNewton(this.value)" onchange="ForceConverterNewton(this.value)">
+                <span id="outputNewton"></span>
+            </p>    
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
+    </footer>
 </body>
 <script>
-function ForceConverterPoundForce(valNum) {
-    var kilogramForce = valNum*0.454;
-    document.querySelector('#outputKilogramForce').innerHTML = kilogramForce;
-    var newton = valNum*4.448;
-    document.querySelector('#outputNewton').innerHTML = newton;
-}
-function ForceConverterKilogramForce(valNum) {
-    var poundForce = valNum*2.205;
-    document.querySelector('#outputPoundForce').innerHTML = poundForce;
-    var newton = valNum*9.807;
-    document.querySelector('#outputNewton').innerHTML = newton;
-}
-function ForceConverterNewton(valNum) {
+    function ForceConverterPoundForce(valNum) {
+        var kilogramForce = valNum*0.454;
+        document.querySelector('#outputKilogramForce').innerHTML = kilogramForce;
+        var newton = valNum*4.448;
+        document.querySelector('#outputNewton').innerHTML = newton;
+    }
+    function ForceConverterKilogramForce(valNum) {
+        var poundForce = valNum*2.205;
+        document.querySelector('#outputPoundForce').innerHTML = poundForce;
+        var newton = valNum*9.807;
+        document.querySelector('#outputNewton').innerHTML = newton;
+    }
+    function ForceConverterNewton(valNum) {
     var poundForce = valNum*0.225;
     document.querySelector('#outputPoundForce').innerHTML = poundForce;
     var kilogramForce = valNum*0.102;
     document.querySelector('#outputKilogramForce').innerHTML = kilogramForce;
 }
-
-</script>
+</script>    
+<script src="scripts.js"></script>
 </html>

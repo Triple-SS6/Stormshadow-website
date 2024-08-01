@@ -46,7 +46,7 @@ function lengthConverterMeter(valNum) {
     var feet = valNum*3.2808;
     document.querySelector('#outputFeet').innerHTML = feet;
     var km = valNum/1000;
-    document.querySelector('#outputKiloMeters').innerHTML = km;
+    document.querySelector('#outputKilometers').innerHTML = km;
 }
 
 function lengthConverterInch(valNum) {

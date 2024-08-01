@@ -3,92 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="autoDropdown.css">
+    <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
     <title>Velocity</title>
 </head>
 <body>
-    <div class="content">
-        <h1>Calculate Velocity</h1>
-        <p>
-            <label>Miles per Hour (MPH): &nbsp;&nbsp;</label>
-            <input type="number" id="inputMilesperHour" placeholder="MilesperHour" oninput="VelocityConverterMilesperHour(this.value)" onchange="VelocityConverterMilesperHour(this.value)">
-            <span id="outputMilesperHour"></span>
-        </p>
-        <p>
-            <label>Kilometres per Hour (km/h): &nbsp;&nbsp;</label>
-            <input type="number" id="inputKilometresperHour" placeholder="KilometresperHour" oninput="VelocityConverterKilometresperHour(this.value)" onchange="VelocityConverterKilometresperHour(this.value)">
-            <span id="outputKilometresperHour"></span>
-        </p>
-        <p>
-            <label>Metres per Second (m/s): &nbsp;&nbsp;</label>
-            <input type="number" id="inputMetresperSecond" placeholder="MetresperSecond" oninput="VelocityConverterMetresperSecond(this.value)" onchange="VelocityConverterMetresperSecond(this.value)">
-            <span id="outputMetresperSecond"></span>
-        </p>
-        <p>
-            <label>Feet per Second (Ft/s): &nbsp;&nbsp;</label>
-            <input type="number" id="inputFeetperSecond" placeholder="FeetperSecond" oninput="VelocityConverterFeetperSecond(this.value)" onchange="VelocityConverterFeetperSecond(this.value)">
-            <span id="outputFeetperSecond"></span>
-        </p>
-        <p>
-            <label>Feet per Minute (Ft/M): &nbsp;&nbsp;</label>
-            <input type="number" id="inputFeetperMinute" placeholder="FeetperMinute" oninput="VelocityConverterFeetperMinute(this.value)" onchange="VelocityConverterFeetperMinute(this.value)">
-            <span id="outputFeetperMinute"></span>
-        </p>
-    </div>
+    <header>
+        <div class="container" onclick="closeD(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="navbar">    
+            <ul class="contentHeader">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">My Projects</a>
+                    <div class="dropdownContent">
+                        <a href="M calc/index.html">Calculator App</a>
+                        <a href="SolarDesign/solar.html">Solar sizing</a>
+                    </div>
+                </li>
+                <li><a href="calculations.html">Calculations</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Converter</a>
+                    <div class="dropdownContent">
+                        <a href="area.html">Area</a>
+                        <a href="density.html">Density</a>
+                        <a href="force.html">Force</a>
+                        <a href="length.html">Length</a>
+                        <a href="mass.html">Mass</a>
+                        <a href="pressure.html">Pressure & Stress</a>
+                        <a href="torque.html">Torque</a>
+                        <a href="volume.html">Volume</a>
+                        <a href="velocity.html">Velocity</a>
+                        <a href="volumetricFlow.html">Volumetric Flow</a>
+                    </div>
+                </li>
+                <li><a href="audio & video/audio.html">Audio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <label class="switch">
+            <input type="checkbox" onclick="dark();">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <h1 class="name">AM STATIONERY</h1>
+
+    <main>
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtnProjects"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    My Projects  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+
+                <div class="dropdownContentProjects">
+                    <a href="M calc/index.html">Calculator App</a>
+                    <a href="SolarDesign/solar.html">Solar sizing</a>
+                </div>
+            </div>
+            <a href="calculations.html">Calculations</a>
+            <div class="dropdownProjects">
+                <a href="javascript:void(0)" class="dropbtn"></a>
+                <button class="dropdown-btnProjects" onclick="droparrow();">
+                    Converter  <i id="arrow" class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdownContentProjects">
+                    <a href="area.html">Area</a>
+                    <a href="density.html">Density</a>
+                    <a href="force.html">Force</a>
+                    <a href="length.html">Length</a>
+                    <a href="mass.html">Mass</a>
+                    <a href="pressure.html">Pressure & Stress</a>
+                    <a href="torque.html">Torque</a>
+                    <a href="volume.html">Volume</a>
+                    <a href="velocity.html">Velocity</a>
+                    <a href="volumetricFlow.html">Volumetric Flow</a>
+                </div>
+            </div>
+            <a href="audio & video/audio.html">Audio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="content">
+            <h1>Calculate Velocity</h1>
+            <p>
+                <label>Miles per Hour (MPH): &nbsp;&nbsp;</label>
+                <input type="number" id="inputMilesperHour" placeholder="MilesperHour" oninput="VelocityConverterMilesperHour(this.value)" onchange="VelocityConverterMilesperHour(this.value)">
+                <span id="outputMilesperHour"></span>
+            </p>
+            <p>
+                <label>Kilometres per Hour (km/h): &nbsp;&nbsp;</label>
+                <input type="number" id="inputKilometresperHour" placeholder="KilometresperHour" oninput="VelocityConverterKilometresperHour(this.value)" onchange="VelocityConverterKilometresperHour(this.value)">
+                <span id="outputKilometresperHour"></span>
+            </p>
+            <p>
+                <label>Metres per Second (m/s): &nbsp;&nbsp;</label>
+                <input type="number" id="inputMetresperSecond" placeholder="MetresperSecond" oninput="VelocityConverterMetresperSecond(this.value)" onchange="VelocityConverterMetresperSecond(this.value)">
+                <span id="outputMetresperSecond"></span>
+            </p>
+            <p>
+                <label>Feet per Second (Ft/s): &nbsp;&nbsp;</label>
+                <input type="number" id="inputFeetperSecond" placeholder="FeetperSecond" oninput="VelocityConverterFeetperSecond(this.value)" onchange="VelocityConverterFeetperSecond(this.value)">
+                <span id="outputFeetperSecond"></span>
+            </p>
+            <p>
+                <label>Feet per Minute (Ft/M): &nbsp;&nbsp;</label>
+                <input type="number" id="inputFeetperMinute" placeholder="FeetperMinute" oninput="VelocityConverterFeetperMinute(this.value)" onchange="VelocityConverterFeetperMinute(this.value)">
+                <span id="outputFeetperMinute"></span>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
+    </footer>
 </body>
 <script>
-function VelocityConverterMilesperHour(valNum) {
-    var kmh = valNum*1.609344;
-    document.querySelector('#outputKilometresperHour').innerHTML = kmh;
-    var ms = valNum/2.237;
-    document.querySelector('#outputMetresperSecond').innerHTML = ms;
-    var Ftss = valNum*1.46667;
-    document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
-    var ftm = valNum*88;
-    document.querySelector('#outputFeetperMinute').innerHTML = ftm;
-}
-
-function VelocityConverterKilometresperHour(valNum) {
-    var mph = valNum/1.609344;
-    document.querySelector('#outputMilesperHour').innerHTML = mph;
-    var ms = valNum/3.6;
-    document.querySelector('#outputMetresperSecond').innerHTML = ms;
-    var Ftss = valNum/1.0973;
-    document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
-    var ftm = valNum*54.6806649;
-    document.querySelector('#outputFeetperMinute').innerHTML = ftm;
-}
-
-function VelocityConverterMetresperSecond(valNum) {
-    var mph = valNum*2.237;
-    document.querySelector('#outputMilesperHour').innerHTML = mph;
-    var kmh = valNum*3.6;
-    document.querySelector('#outputKilometresperHour').innerHTML = kmh;
-    var Ftss = valNum*3.2808399;
-    document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
-    var ftm = valNum*196.85039;
-    document.querySelector('#outputFeetperMinute').innerHTML = ftm;
-}
-
-function VelocityConverterFeetperSecond(valNum) {
-    var kmh = valNum*1.09728;
-    document.querySelector('#outputKilometresperHour').innerHTML = kmh;
-    var ms = valNum*0.3048;
-    document.querySelector('#outputMetresperSecond').innerHTML = ms;
-    var mph = valNum*0.6818182;
-    document.querySelector('#outputMilesperHour').innerHTML = mph;
-    var ftm = valNum*60;
-    document.querySelector('#outputFeetperMinute').innerHTML = ftm;
-}
-
-function VelocityConverterFeetperMinute(valNum) {
-    var kmh = valNum*0.018288;
-    document.querySelector('#outputKilometresperHour').innerHTML = kmh;
-    var ms = valNum*0.00508;
-    document.querySelector('#outputMetresperSecond').innerHTML = ms;
-    var mph = valNum*0.0113636;
-    document.querySelector('#outputMilesperHour').innerHTML = mph;
-    var Ftss = valNum*0.016667;
-    document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
-}
+    function VelocityConverterMilesperHour(valNum) {
+        var kmh = valNum*1.609344;
+        document.querySelector('#outputKilometresperHour').innerHTML = kmh;
+        var ms = valNum/2.237;
+        document.querySelector('#outputMetresperSecond').innerHTML = ms;
+        var Ftss = valNum*1.46667;
+        document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
+        var ftm = valNum*88;
+        document.querySelector('#outputFeetperMinute').innerHTML = ftm;
+    }
+    
+    function VelocityConverterKilometresperHour(valNum) {
+        var mph = valNum/1.609344;
+        document.querySelector('#outputMilesperHour').innerHTML = mph;
+        var ms = valNum/3.6;
+        document.querySelector('#outputMetresperSecond').innerHTML = ms;
+        var Ftss = valNum/1.0973;
+        document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
+        var ftm = valNum*54.6806649;
+        document.querySelector('#outputFeetperMinute').innerHTML = ftm;
+    }
+    
+    function VelocityConverterMetresperSecond(valNum) {
+        var mph = valNum*2.237;
+        document.querySelector('#outputMilesperHour').innerHTML = mph;
+        var kmh = valNum*3.6;
+        document.querySelector('#outputKilometresperHour').innerHTML = kmh;
+        var Ftss = valNum*3.2808399;
+        document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
+        var ftm = valNum*196.85039;
+        document.querySelector('#outputFeetperMinute').innerHTML = ftm;
+    }
+    
+    function VelocityConverterFeetperSecond(valNum) {
+        var kmh = valNum*1.09728;
+        document.querySelector('#outputKilometresperHour').innerHTML = kmh;
+        var ms = valNum*0.3048;
+        document.querySelector('#outputMetresperSecond').innerHTML = ms;
+        var mph = valNum*0.6818182;
+        document.querySelector('#outputMilesperHour').innerHTML = mph;
+        var ftm = valNum*60;
+        document.querySelector('#outputFeetperMinute').innerHTML = ftm;
+    }
+    
+    function VelocityConverterFeetperMinute(valNum) {
+        var kmh = valNum*0.018288;
+        document.querySelector('#outputKilometresperHour').innerHTML = kmh;
+        var ms = valNum*0.00508;
+        document.querySelector('#outputMetresperSecond').innerHTML = ms;
+        var mph = valNum*0.0113636;
+        document.querySelector('#outputMilesperHour').innerHTML = mph;
+        var Ftss = valNum*0.016667;
+        document.querySelector('#outputFeetperSecond').innerHTML = Ftss;
+    }
 </script>
+    
+<script src="scripts.js"></script>
 </html>

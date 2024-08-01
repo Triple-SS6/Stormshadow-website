@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="autoDropdown.css">
+    <link rel="stylesheet" href="mainEcommerce.css">
     <script src="https://kit.fontawesome.com/74ccdbfadd.js" crossorigin="anonymous"></script>
-    <title>Mass</title>
+    <title>My E-commerce Store</title>
 </head>
 <body>
     <header>
@@ -93,28 +94,33 @@
         </div>
 
         <div class="content">
-            <h1>Calculate Mass</h1>
-            <p>
-                <label>Ton: &nbsp;&nbsp;</label>
-                <input type="number" id="inputTon" placeholder="Ton" oninput="MassConverterTon(this.value)" onchange="MassConverterTon(this.value)">
-                <span id="outputTon"></span>
-            </p>
-            <p>
-                <label>Tonne: &nbsp;&nbsp;</label>
-                <input type="number" id="inputTonne" placeholder="Tonne" oninput="MassConverterTonne(this.value)" onchange="MassConverterTonne(this.value)">
-                <span id="outputTonne"></span>
-            </p>
-            <p>
-                <label>Pound (Ib): &nbsp;&nbsp;</label>
-                <input type="number" id="inputPound" placeholder="Pound" oninput="MassConverterPound(this.value)" onchange="MassConverterPound(this.value)">
-                <span id="outputPound"></span>
-            </p>
-            <p>
-                <label>Kilogram (Kg): &nbsp;&nbsp;</label>
-                <input type="number" id="inputKilogram" placeholder="Kilogram" oninput="MassConverterKilogram(this.value)" onchange="MassConverterKilogram(this.value)">
-                <span id="outputKilogram"></span>
-            </p>
+            <div class="logo">My Store</div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
 
+            <section id="home">
+                <h1>Welcome to My E-commerce Store</h1>
+                <p>Find the best products at great prices!</p>
+            </section>
+
+            <section id="products">
+                <h2>Our Products</h2>
+                <div class="product-grid">
+                    <!-- Product items will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="cart">
+                <h2>Shopping Cart</h2>
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn">Checkout</button>
+            </section>
         </div>
     </main>
 
@@ -122,42 +128,6 @@
         &copy; <span class="year"></span> <a href="contact.html">Stormshadow6.</a> &nbsp; All rights reserved.
     </footer>
 </body>
-<script>
-    function MassConverterTon(valNum) {
-        var tonne = valNum*1.016;
-        document.querySelector('#outputTonne').innerHTML = tonne;
-        var pound = valNum*2240;
-        document.querySelector('#outputPound').innerHTML = pound;
-        var kilogram = valNum*(1016);
-        document.querySelector('#outputKilogram').innerHTML = kilogram;
-    }
-    
-    function MassConverterTonne(valNum) {
-        var ton = valNum*0.984;
-        document.querySelector('#outputTon').innerHTML = ton;
-        var pound = valNum*2205;
-        document.querySelector('#outputPound').innerHTML = pound;
-        var kilogram = valNum*(1000);
-        document.querySelector('#outputKilogram').innerHTML = kilogram;
-    }
-    
-    function MassConverterPound(valNum) {
-        var ton = valNum/2240;
-        document.querySelector('#outputTon').innerHTML = ton;
-        var tonne = valNum/2205;
-        document.querySelector('#outputTonne').innerHTML = tonne;
-        var kilogram = valNum/2.205;
-        document.querySelector('#outputKilogram').innerHTML = kilogram;
-    }
-    
-    function MassConverterKilogram(valNum) {
-        var ton = valNum/1016;
-        document.querySelector('#outputTon').innerHTML = ton;
-        var tonne = valNum/1000;
-        document.querySelector('#outputTonne').innerHTML = tonne;
-        var pound = valNum*2.20462;
-        document.querySelector('#outputPound').innerHTML = pound;
-    }
-</script>
+<script src="scriptsEcommerce.js"></script>
 <script src="scripts.js"></script>
 </html>

@@ -4,7 +4,6 @@ ul.contentHeader {
     padding: 0;
     overflow: hidden;
 }
-  
 li {
     float: left;
 }
@@ -19,7 +18,17 @@ li a, .dropbtn {
 li.dropdown {
     display: inline-block;
 }
-  
+input {
+    margin: 2px;
+    padding: 3px;
+    /* width: 180px; */
+    border-radius: 8px;
+}
+.dealing {
+    float: left;
+    gap: 5px;
+}
+
 .dropdownContent {
     display: none;
     position: absolute;
@@ -76,7 +85,7 @@ li.dropdown {
     padding: 0 15px;
     margin: 0 5px;
 }
-button {
+button.dropdown-btnProjects {
     margin: 0;
     padding: 0 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -91,8 +100,13 @@ button:hover {
     padding: 5px 16px;
     color: rgb(5, 5, 5);
     background-color: rgb(225, 65, 217);
-    font-size: 28px;
+    font-size: 22px;
     color:whitesmoke;
+}
+
+button {
+    border-radius: 25px;
+    cursor: pointer;
 }
 #arrow {
     color: black;
